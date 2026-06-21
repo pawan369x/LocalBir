@@ -159,8 +159,8 @@ const Footer = ({ onBookClick }) => {
                                 />
                                 <ContactItem
                                     icon={<Mail size={18} />}
-                                    text="hello@birbillingguide.com"
-                                    href="mailto:hello@birbillingguide.com"
+                                    text="abhigladhandx369@gmail.com"
+                                    href="mailto:abhigladhandx369@gmail.com"
                                 />
                             </ul>
                         </div>
