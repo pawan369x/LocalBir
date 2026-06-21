@@ -56,7 +56,7 @@ const Layout = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-slate-950 dark:text-slate-100 min-h-screen font-sans selection:bg-sky-200 selection:text-sky-900 text-gray-900 flex flex-col transition-colors duration-500">
+    <div className="bg-white dark:bg-slate-950 dark:text-slate-100 min-h-screen font-sans selection:bg-sky-200 selection:text-sky-900 text-gray-900 flex flex-col transition-colors duration-500 overflow-x-hidden">
       {/* Trust Marquee Bar */}
       <TrustBar />
       {/* Header Overlay */}
