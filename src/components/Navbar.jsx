@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronRight, Mountain, Coffee, BedDouble, MapPin, ArrowRight, Wind, Users, Sun, Home, BookOpen } from 'lucide-react';
+import { Menu, X, ChevronRight, Mountain, Coffee, BedDouble, MapPin, ArrowRight, Wind, Users, Sun, Home, BookOpen, Cloud } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
 // --- ADVANCED LIVE STATUS BAR ---
@@ -11,18 +11,18 @@ const LiveStatus = ({ scrolled }) => (
         {/* Desktop View (Static) */}
         <div className="hidden md:flex justify-between w-full max-w-7xl px-8">
             <div className="flex gap-6">
-                <span className="flex items-center text-emerald-600 font-bold">
+                <span className="flex items-center text-red-500 font-bold">
                     <span className="relative flex h-2 w-2 mr-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                     </span>
-                    FLYING STATUS: OPEN
+                    FLYING STATUS: CLOSED
                 </span>
                 <span className="flex items-center text-sky-700">
-                    <Wind size={14} className="mr-1.5" /> Wind: 12km/h (Perfect)
+                    <Wind size={14} className="mr-1.5" /> Wind: 14km/h
                 </span>
-                <span className="flex items-center text-amber-600">
-                    <Sun size={14} className="mr-1.5" /> Temp: 18°C
+                <span className="flex items-center text-slate-500">
+                    <Cloud size={14} className="mr-1.5" /> Weather: Cloudy
                 </span>
             </div>
             <div className="flex items-center text-slate-500 font-medium">
@@ -37,9 +37,9 @@ const LiveStatus = ({ scrolled }) => (
                 transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
                 className="whitespace-nowrap flex gap-8 items-center"
             >
-                <span className="flex items-center text-emerald-600 font-bold">🟢 FLYING: OPEN</span>
-                <span className="flex items-center text-sky-700">🌬️ Wind: 12km/h</span>
-                <span className="flex items-center text-amber-600">☀️ Temp: 18°C</span>
+                <span className="flex items-center text-red-500 font-bold">🔴 FLYING: CLOSED</span>
+                <span className="flex items-center text-sky-700">🌬️ Wind: 14km/h</span>
+                <span className="flex items-center text-slate-500">☁️ Cloudy</span>
                 <span className="flex items-center text-orange-500">👥 Crowd: Low</span>
             </motion.div>
         </div>
@@ -121,9 +121,9 @@ const Navbar = ({ onBookClick }) => {
 
                         <div className="flex-shrink-0 z-50 relative">
                             <Link to="/" className="flex items-center group">
-                                <img 
-                                    src="/Main-Logo1.png" 
-                                    alt="Bir Billing Guide Logo" 
+                                <img
+                                    src="/Main-Logo1.png"
+                                    alt="Bir Billing Guide Logo"
                                     className={`h-20 w-20 md:h-24 md:w-24 object-contain transition-all duration-300 scale-[2.2] group-hover:scale-[2.4] ${!isTransparent ? 'brightness-0' : 'drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]'}`}
                                 />
                             </Link>
@@ -170,12 +170,12 @@ const Navbar = ({ onBookClick }) => {
                         </div>
 
                         {/* --- MOBILE TOGGLE BUTTON (Corrected Logic) --- */}
-                        <div className="lg:hidden flex items-center gap-3 z-[60]"> 
+                        <div className="lg:hidden flex items-center gap-3 z-[60]">
                             <ThemeToggle />
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 className={`p-2 rounded-full transition-all active:scale-90 ${isOpen
-                                    ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white' 
+                                    ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white'
                                     : `${isTransparent ? 'bg-black/20 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white'}`
                                     }`}
                             >

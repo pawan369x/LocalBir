@@ -25,6 +25,7 @@ const FlightDashboard = ({ onBookClick }) => {
         // Safety Logic: Wind > 30km/h is risky
         if (speed > 30) return { status: "High Wind Warning", color: "text-red-500", bg: "bg-red-100", icon: <AlertTriangle size={24} />, msg: "Wind too strong for takeoff. Please wait." };
         if (weatherMain === "Rain" || weatherMain === "Thunderstorm") return { status: "Flight Cancelled", color: "text-red-500", bg: "bg-red-100", icon: <AlertTriangle size={24} />, msg: "Raining at takeoff site." };
+        if (weatherMain === "Clouds") return { status: "Flights Closed", color: "text-red-500", bg: "bg-red-100", icon: <AlertTriangle size={24} />, msg: "Currently Closed due to Cloudy Weather." };
 
         return { status: "Green Day! Fly Now", color: "text-emerald-600", bg: "bg-emerald-100", icon: <CheckCircle2 size={24} />, msg: "Conditions are 100% perfect for flying." };
     };
@@ -44,12 +45,12 @@ const FlightDashboard = ({ onBookClick }) => {
                 // Fallback to Mock Data
                 setWeather({
                     coord: { lon: 76.7177, lat: 32.0497 },
-                    weather: [{ id: 800, main: "Clear", description: "clear sky", icon: "01d" }],
+                    weather: [{ id: 803, main: "Clouds", description: "broken clouds", icon: "04d" }],
                     base: "stations",
-                    main: { temp: 18, feels_like: 17, temp_min: 16, temp_max: 20, pressure: 1015, humidity: 45 },
-                    visibility: 10000,
-                    wind: { speed: 5.5, deg: 160 }, // approx 20km/h
-                    clouds: { all: 0 },
+                    main: { temp: 16, feels_like: 16, temp_min: 15, temp_max: 18, pressure: 1012, humidity: 65 },
+                    visibility: 8000,
+                    wind: { speed: 4.1, deg: 180 },
+                    clouds: { all: 75 },
                     dt: 1600000000,
                     sys: { type: 1, id: 9165, country: "IN", sunrise: 1600000000, sunset: 1600050000 },
                     timezone: 19800,
