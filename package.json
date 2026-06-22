@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "blog:install": "npm install --prefix localbir-blog",
+    "blog:dev": "npm run dev --prefix localbir-blog",
+    "blog:deploy": "npm run deploy --prefix localbir-blog"
   },
   "overrides": {
     "react-helmet-async": {

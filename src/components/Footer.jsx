@@ -169,7 +169,7 @@ const Footer = ({ onBookClick }) => {
 
                 {/* BOTTOM BAR */}
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 text-sm font-medium">
-                    <p>© 2024 Bir Billing Guide. Created by <span className="text-sky-500 font-bold">AtlasMedia</span>.</p>
+                    <p>© 2024 Bir Billing Guide. Created by <span className="text-sky-500 font-bold">Pawan</span>.</p>
 
                     <div className="flex items-center gap-8">
                         <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

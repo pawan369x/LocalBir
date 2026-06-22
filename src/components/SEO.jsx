@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const SEO = ({ title, description, keywords, url, schema }) => {
+    const formattedTitle = title && title.includes("Bir Billing Guide") ? title : `${title} | Bir Billing Guide`;
     // Default highly-detailed LocalBusiness Schema for Local Bir to feed AI Search Engines (GEO)
     const baseLocalBusinessSchema = {
         "@context": "https://schema.org",
@@ -101,7 +102,7 @@ const SEO = ({ title, description, keywords, url, schema }) => {
     return (
         <Helmet>
             {/* Standard Metadata */}
-            <title>{title} | Bir Billing Guide</title>
+            <title>{formattedTitle}</title>
             <meta name="description" content={description} />
             <meta name="keywords" content={keywords} />
             <link rel="canonical" href={url} />
@@ -113,14 +114,14 @@ const SEO = ({ title, description, keywords, url, schema }) => {
 
             {/* Facebook / WhatsApp / LinkedIn (Open Graph) */}
             <meta property="og:type" content="website" />
-            <meta property="og:title" content={`${title} | Bir Billing Guide`} />
+            <meta property="og:title" content={formattedTitle} />
             <meta property="og:description" content={description} />
             <meta property="og:url" content={url} />
             <meta property="og:image" content="https://birbillingguide.com/adventure.png" />
 
             {/* Twitter Card */}
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content={`${title} | Bir Billing Guide`} />
+            <meta name="twitter:title" content={formattedTitle} />
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content="https://birbillingguide.com/adventure.png" />
 

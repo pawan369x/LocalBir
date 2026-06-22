@@ -66,8 +66,8 @@ const Home = () => {
     return (
         <>
             <SEO
-                title="Best Paragliding & Adventure Booking in Bir Billing"
-                description="Book the safest Paragliding in Bir Billing starting @₹3000. We offer Bungee Jumping, Sky Cycling, Trekking, and Local Stays with a 100% Safety Record."
+                title="Bir Billing Guide | Best Paragliding, Long Fly & Taxi Service"
+                description="Book the best paragliding experience in Bir Billing with long flights at the best price. We offer safe paragliding, local taxi services, and camping packages."
                 keywords="Paragliding in Bir Billing, Bir Billing Paragliding Cost, Bungee Jumping Bir, Sky Cycling Himachal, Bir Billing Hotels, Adventure Sports India, Bir Billing Guide"
                 url="https://birbillingguide.com/"
                 schema={faqSchema}
