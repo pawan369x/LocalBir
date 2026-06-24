@@ -11,18 +11,18 @@ const LiveStatus = ({ scrolled }) => (
         {/* Desktop View (Static) */}
         <div className="hidden md:flex justify-between w-full max-w-7xl px-8">
             <div className="flex gap-6">
-                <span className="flex items-center text-red-500 font-bold">
+                <span className="flex items-center text-emerald-600 font-bold">
                     <span className="relative flex h-2 w-2 mr-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                     </span>
-                    FLYING STATUS: CLOSED
+                    FLYING STATUS: OPEN
                 </span>
                 <span className="flex items-center text-sky-700">
                     <Wind size={14} className="mr-1.5" /> Wind: 14km/h
                 </span>
                 <span className="flex items-center text-slate-500">
-                    <Cloud size={14} className="mr-1.5" /> Weather: Cloudy
+                    <Cloud size={14} className="mr-1.5" /> Weather: Cloudy (Good)
                 </span>
             </div>
             <div className="flex items-center text-slate-500 font-medium">
@@ -37,9 +37,9 @@ const LiveStatus = ({ scrolled }) => (
                 transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
                 className="whitespace-nowrap flex gap-8 items-center"
             >
-                <span className="flex items-center text-red-500 font-bold">🔴 FLYING: CLOSED</span>
+                <span className="flex items-center text-emerald-600 font-bold">🟢 FLYING: OPEN</span>
                 <span className="flex items-center text-sky-700">🌬️ Wind: 14km/h</span>
-                <span className="flex items-center text-slate-500">☁️ Cloudy</span>
+                <span className="flex items-center text-slate-500">☁️ Cloudy (Good)</span>
                 <span className="flex items-center text-orange-500">👥 Crowd: Low</span>
             </motion.div>
         </div>

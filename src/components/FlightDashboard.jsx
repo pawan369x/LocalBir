@@ -25,7 +25,7 @@ const FlightDashboard = ({ onBookClick }) => {
         // Safety Logic: Wind > 30km/h is risky
         if (speed > 30) return { status: "High Wind Warning", color: "text-red-500", bg: "bg-red-100", icon: <AlertTriangle size={24} />, msg: "Wind too strong for takeoff. Please wait." };
         if (weatherMain === "Rain" || weatherMain === "Thunderstorm") return { status: "Flight Cancelled", color: "text-red-500", bg: "bg-red-100", icon: <AlertTriangle size={24} />, msg: "Raining at takeoff site." };
-        if (weatherMain === "Clouds") return { status: "Flights Closed", color: "text-red-500", bg: "bg-red-100", icon: <AlertTriangle size={24} />, msg: "Currently Closed due to Cloudy Weather." };
+        if (weatherMain === "Clouds") return { status: "Cloudy Sky! Fly Now", color: "text-emerald-600", bg: "bg-emerald-100", icon: <CheckCircle2 size={24} />, msg: "Weather is cloudy but perfectly safe for flying." };
 
         return { status: "Green Day! Fly Now", color: "text-emerald-600", bg: "bg-emerald-100", icon: <CheckCircle2 size={24} />, msg: "Conditions are 100% perfect for flying." };
     };
